@@ -24,5 +24,11 @@ namespace TeamProject
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UserForm userForm = new UserForm();
+            userForm.ShowDialog();
+        }
     }
 }
