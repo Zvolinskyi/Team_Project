@@ -58,6 +58,8 @@ namespace TeamProject
             background.Fill = backgroundSprite;
             background.Fill = backgroundSprite;
 
+            StartGame();
+
         }
 
         private void GameEngine(object sender, EventArgs e)
