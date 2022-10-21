@@ -38,7 +38,7 @@ namespace TeamProject
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
-            backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));
+            //backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));
             background.Fill = backgroundSprite;
             background.Fill = backgroundSprite;
             StartGame();
@@ -67,6 +67,7 @@ namespace TeamProject
                 jumping = true;
                 force = 15;
                 speed = -12;
+                playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));//добавити анімацію
             }
         }
         private void StartGame()
@@ -78,7 +79,7 @@ namespace TeamProject
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             RunSprite(1);
-            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
+            //obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
             obstacle.Fill = obstacleSprite;
             jumping = false;
             gameOver = false;
