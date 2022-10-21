@@ -12,49 +12,33 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 using System.Windows.Threading;
-
 namespace TeamProject
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
-
         Rect playerHitBox;
         Rect groundHitBox;
         Rect obstacleHitBox;
-
         bool jumping;
-
         int force = 20;
         int speed = 5;
         Random rnd = new Random();
-
         bool gameOver;
-
         double spriteIndex = 0;
-
         ImageBrush playerSprite = new ImageBrush();
         ImageBrush backgroundSprite = new ImageBrush();
         ImageBrush obstacleSprite = new ImageBrush();
-
         int[] obstaclePosition = { 320, 310, 300, 305, 315 };
         int score = 0;
         public MainWindow()
         {
             InitializeComponent();
-
-
             MyCanvas.Focus();
-
             gameTimer.Tick += GameEngine;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));
-
             background.Fill = backgroundSprite;
             background.Fill = backgroundSprite;
 
@@ -82,7 +66,20 @@ namespace TeamProject
         }
         private void StartGame()
         {
-
+            Canvas.SetLeft(background, 0);
+            Canvas.SetLeft(background2, 1262);
+            Canvas.SetLeft(player, 262);
+            Canvas.SetLeft(background2, 1262);
+            Canvas.SetLeft(obstacle, 950);
+            Canvas.SetTop(obstacle, 310);
+            RunSprite(1);
+            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
+            obstacle.Fill = obstacleSprite;
+            jumping = false;
+            gameOver = false;
+            score = 0;
+            scoreText.Content = "Score: " + score;
+            gameTimer.Start();
         }
         private void RunSprite()
         {
