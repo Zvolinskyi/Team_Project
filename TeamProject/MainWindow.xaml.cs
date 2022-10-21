@@ -38,42 +38,13 @@ namespace TeamProject
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
-            //backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));
             background.Fill = backgroundSprite;
             background.Fill = backgroundSprite;
             StartGame();
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            Canvas.SetLeft(background, Canvas.GetLeft(background) - 18);
-            Canvas.SetLeft(background2, Canvas.GetLeft(background2) - 18);
-            if (Canvas.GetLeft(background) < -1262)
-            {
-                Canvas.SetLeft(background, Canvas.GetLeft(background2) + background2.Width);
-            } 
-            if (Canvas.GetLeft(background2) < -1262)
-            {
-                Canvas.SetLeft(background2, Canvas.GetLeft(background) + background2.Width);
-            }
-            Canvas.SetTop(player, Canvas.GetTop(player) + speed);
-            Canvas.SetLeft(obstacle, Canvas.GetLeft(obstacle) - 12);
-            scoreText.Content = "Score: " + score;
-            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width - 15, player.Height - 18);
-            obstacleHitBox = new Rect(Canvas.GetLeft(obstacle), Canvas.GetTop(obstacle), obstacle.Width, obstacle.Height);
-            groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width, ground.Height);
-            if (playerHitBox.IntersectsWith(groundHitBox))
-            {
-                speed = 0;
-                Canvas.SetTop(player, Canvas.GetTop(ground) - player.Height);
-                jumping = false;
-                spriteIndex += .5;
-                if (spriteIndex > 8)
-                {
-                    spriteIndex = 1;
-                }
-                RunSprite(spriteIndex);
-            }
-
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -95,7 +66,7 @@ namespace TeamProject
                 jumping = true;
                 force = 15;
                 speed = -12;
-                //playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));  //добавити анімацію
+                //playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.png"));  //добавити анімацію
             }
         }
         private void StartGame()
@@ -107,7 +78,6 @@ namespace TeamProject
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             RunSprite(1);
-            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.png"));
             obstacle.Fill = obstacleSprite;
             jumping = false;
             gameOver = false;
