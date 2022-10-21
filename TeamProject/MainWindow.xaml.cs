@@ -40,7 +40,7 @@ namespace TeamProject
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.png"));
             background.Fill = backgroundSprite;
-            background.Fill = backgroundSprite;
+            background2.Fill = backgroundSprite;
             StartGame();
         }
         private void GameEngine(object sender, EventArgs e)
