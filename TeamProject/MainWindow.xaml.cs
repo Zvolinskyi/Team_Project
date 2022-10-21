@@ -45,17 +45,7 @@ namespace TeamProject
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            Canvas.SetLeft(background, 0);
-            Canvas.SetLeft(background2, 1262);
-
-            Canvas.SetLeft(player,110);
-            Canvas.SetTop(player,110);
-
-            Canvas.SetLeft(obstacle, 950);
-            Canvas.SetTop(obstacle, 310);
-
-            RunSprite(1);
-
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -89,7 +79,7 @@ namespace TeamProject
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             RunSprite(1);
-            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
+            //obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
             obstacle.Fill = obstacleSprite;
             jumping = false;
             gameOver = false;
