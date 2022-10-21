@@ -17,9 +17,6 @@ using System.Windows.Threading;
 
 namespace TeamProject
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -47,21 +44,14 @@ namespace TeamProject
         public MainWindow()
         {
             InitializeComponent();
-
-
             MyCanvas.Focus();
-
             gameTimer.Tick += GameEngine;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
             backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.jpg"));
-
             background.Fill = backgroundSprite;
             background.Fill = backgroundSprite;
-
             StartGame();
-
         }
-
         private void GameEngine(object sender, EventArgs e)
         {
             throw new NotImplementedException();
@@ -72,23 +62,44 @@ namespace TeamProject
             UserForm userForm = new UserForm();
             userForm.ShowDialog();
         }
-
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-
+            if(e.Key == Key.Enter && gameOver == true)
+            {
+                StartGame();
+            }
         }
-
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-
+            if(e.Key == Key.Space && jumping == false && Canvas.GetTop(player) > 260)
+            {
+                jumping = true;
+                force = 15;
+                speed = -12;
+            }
         }
         private void StartGame()
         {
 
         }
-        private void RunSprite()
+        private void RunSprite(double i)
         {
-
+            switch(i)
+            {
+                case 1:
+                    playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/1.png"));
+                    break;
+                case 2:
+                    playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/2.png"));
+                    break;
+                case 3:
+                    playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/3.png"));
+                    break;
+                case 4:
+                    playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/4.png"));
+                    break;
+            }
+            player.Fill = playerSprite;
         }
     }
 }
