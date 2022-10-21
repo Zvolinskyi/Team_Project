@@ -45,7 +45,8 @@ namespace TeamProject
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Canvas.SetLeft(background, Canvas.GetLeft(background) - 3);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -78,7 +79,7 @@ namespace TeamProject
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             RunSprite(1);
-            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.gif"));
+            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.png"));
             obstacle.Fill = obstacleSprite;
             jumping = false;
             gameOver = false;
