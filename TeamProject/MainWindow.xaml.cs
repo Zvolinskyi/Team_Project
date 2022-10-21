@@ -58,7 +58,7 @@ namespace TeamProject
             Canvas.SetTop(player, Canvas.GetTop(player) + speed);
             Canvas.SetLeft(obstacle, Canvas.GetLeft(obstacle) - 12);
             scoreText.Content = "Score: " + score;
-            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width - 15, player.Height - 18);
+            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width - 15, player.Height);
             obstacleHitBox = new Rect(Canvas.GetLeft(obstacle), Canvas.GetTop(obstacle), obstacle.Width, obstacle.Height);
             groundHitBox = new Rect(Canvas.GetLeft(ground), Canvas.GetTop(ground), ground.Width, ground.Height);
             if (playerHitBox.IntersectsWith(groundHitBox))
