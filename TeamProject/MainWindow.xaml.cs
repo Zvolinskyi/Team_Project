@@ -17,6 +17,7 @@ namespace TeamProject
 {
     public partial class MainWindow : Window
     {
+static int playerSpeed = 5;
         DispatcherTimer gameTimer = new DispatcherTimer();
         Rect playerHitBox;
         Rect groundHitBox;
@@ -45,8 +46,9 @@ namespace TeamProject
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            Canvas.SetLeft(background, Canvas.GetLeft(background) - 18);
-            Canvas.SetLeft(background2, Canvas.GetLeft(background2) - 18);
+            
+            Canvas.SetLeft(background, Canvas.GetLeft(background) - playerSpeed);
+            Canvas.SetLeft(background2, Canvas.GetLeft(background2) - playerSpeed);
             if (Canvas.GetLeft(background) < -1262)
             {
                 Canvas.SetLeft(background, Canvas.GetLeft(background2) + background2.Width);
@@ -66,16 +68,59 @@ namespace TeamProject
                 speed = 0;
                 Canvas.SetTop(player, Canvas.GetTop(ground) - player.Height);
                 jumping = false;
-                spriteIndex += .5;
+                spriteIndex += .25;
                 if (spriteIndex > 8)
                 {
                     spriteIndex = 1;
                 }
                 RunSprite(spriteIndex);
             }
+            if (jumping == true)
+            {
+                speed = -9;
+                force -= 1;
+            }
+            else
+                speed = 12;
+            if (force < 0)
+            {
+                jumping = false;
+            }
+            if (Canvas.GetLeft(obstacle) < -50)
+            {
+                Canvas.SetLeft(obstacle, 950);
+                Canvas.SetTop(obstacle, obstaclePosition[rnd.Next(0, obstaclePosition.Length)]);
+                score += 1;
+            }
+            int scoreToChange = 5;
+            if (score==scoreToChange)
+            {
+                playerSpeed += 1;
+                scoreToChange += 5;
+            }
+            if (playerHitBox.IntersectsWith(obstacleHitBox))
+            {
+                gameOver = true;
+                gameTimer.Stop();
+            }
+            if (gameOver == true)
+            {
+                obstacle.Stroke = Brushes.Black;
+                obstacle.StrokeThickness = 1;
+                player.Stroke = Brushes.Red;
+                player.StrokeThickness = 1;
+                //UserForm userForm = new UserForm();
+                //userForm.ShowDialog();
+            }
+            else
+            {
+                player.StrokeThickness = 0;
+                obstacle.StrokeThickness = 0;
             }
 
-            private void Button_Click(object sender, RoutedEventArgs e)
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             UserForm userForm = new UserForm();
             userForm.ShowDialog();
