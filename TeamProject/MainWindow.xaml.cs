@@ -39,7 +39,7 @@ static int playerSpeed = 5;
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
             gameTimer.Interval = TimeSpan.FromMilliseconds(20);
-            backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.png"));
+            backgroundSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background2.png"));
             background.Fill = backgroundSprite;
             background2.Fill = backgroundSprite;
             StartGame();
