@@ -151,7 +151,7 @@ static int playerSpeed = 5;
             Canvas.SetLeft(obstacle, 950);
             Canvas.SetTop(obstacle, 310);
             RunSprite(1);
-            //obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/image/obstacle.png"));
+            obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/obstacle.png"));
             obstacle.Fill = obstacleSprite;
             jumping = false;
             gameOver = false;
