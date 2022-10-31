@@ -18,6 +18,7 @@ namespace TeamProject
 {
     public partial class MainWindow : Window
     {
+        DateTime date1 = new DateTime(0, 0);
         static int playerSpeed = 2;
         static int obstacleSpeed = 2;
         static int scoreToChange = 5;
