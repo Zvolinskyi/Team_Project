@@ -11,7 +11,7 @@
         <Rectangle Name ="background2" Height="400" Width="1262" Fill="lightgreen" Canvas.Left="1262" HorizontalAlignment="Center" Canvas.Top="3" VerticalAlignment="Top" />
         <Rectangle Name ="ground" Height="32" Width="792" Fill="Black" Canvas.Top ="408" Canvas.Left="8"/>
         <Rectangle Name ="player" Height="99" Width="67" Fill="Brown" Canvas.Top ="151" Canvas.Left="110"/>
-        <Rectangle Name ="obstacle" Height="100" Width="100" Fill="Red" Canvas.Top ="203" Canvas.Left="718" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name ="obstacle" Height="52" Width="63" Fill="Red" Canvas.Top ="388" Canvas.Left="737" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.652"/>
         <Label Name="scoreText" FontSize="32" FontWeight="Bold" Content="Score: 0"/>
 
     </Canvas>
