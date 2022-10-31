@@ -10,8 +10,8 @@
         <Rectangle Name ="background" Height="400" Width="1262" Fill="Orange" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="3" />
         <Rectangle Name ="background2" Height="400" Width="1262" Fill="lightgreen" Canvas.Left="1260" HorizontalAlignment="Center" Canvas.Top="3" VerticalAlignment="Top" />
         <Rectangle Name ="ground" Height="32" Width="792" Fill="Black" Canvas.Top ="405" Canvas.Left="-2"/>
-        <Rectangle Name ="player" Height="91" Width="62" Fill="Brown" Canvas.Top ="159" Canvas.Left="110"/>
-        <Rectangle Name ="obstacle" Height="76" Width="76" Fill="Red" Canvas.Top ="327" Canvas.Left="785" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name ="player" Height="80" Width="47" Fill="Brown" Canvas.Top ="159" Canvas.Left="125"/>
+        <Rectangle Name ="obstacle" Height="72" Width="63" Fill="Red" Canvas.Top ="331" Canvas.Left="785" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Name="scoreText" FontSize="32" FontWeight="Bold" Content="Score: 0" Foreground="White"/>
 
     </Canvas>

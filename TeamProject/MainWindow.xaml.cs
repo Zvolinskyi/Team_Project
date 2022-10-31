@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,7 +18,10 @@ namespace TeamProject
 {
     public partial class MainWindow : Window
     {
-static int playerSpeed = 5;
+        static int playerSpeed = 2;
+        static int obstacleSpeed = 2;
+        static int scoreToChange = 5;
+        static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
         Rect playerHitBox;
         Rect groundHitBox;
@@ -92,10 +96,11 @@ static int playerSpeed = 5;
                 Canvas.SetTop(obstacle, obstaclePosition[rnd.Next(0, obstaclePosition.Length)]);
                 score += 1;
             }
-            int scoreToChange = 5;
+
             if (score==scoreToChange)
             {
                 playerSpeed += 1;
+                counter++;
                 scoreToChange += 5;
             }
             if (playerHitBox.IntersectsWith(obstacleHitBox))
@@ -109,6 +114,8 @@ static int playerSpeed = 5;
                 obstacle.StrokeThickness = 1;
                 player.Stroke = Brushes.Red;
                 player.StrokeThickness = 1;
+                playerSpeed -= counter;
+                counter = 0;
                 //UserForm userForm = new UserForm();
                 //userForm.ShowDialog();
             }
