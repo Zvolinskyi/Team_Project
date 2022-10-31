@@ -8,11 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Canvas Name="MyCanvas" Focusable="True" KeyDown="KeyIsDown" KeyUp ="KeyIsUp" Background ="LightBlue">
         <Rectangle Name ="background" Height="400" Width="1262" Fill="Orange" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="3" />
-        <Rectangle Name ="background2" Height="400" Width="1262" Fill="lightgreen" Canvas.Left="1262" HorizontalAlignment="Center" Canvas.Top="3" VerticalAlignment="Top" />
-        <Rectangle Name ="ground" Height="32" Width="792" Fill="Black" Canvas.Top ="408" Canvas.Left="8"/>
-        <Rectangle Name ="player" Height="99" Width="67" Fill="Brown" Canvas.Top ="151" Canvas.Left="110"/>
-        <Rectangle Name ="obstacle" Height="100" Width="100" Fill="Red" Canvas.Top ="203" Canvas.Left="718" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Name="scoreText" FontSize="32" FontWeight="Bold" Content="Score: 0"/>
+        <Rectangle Name ="background2" Height="400" Width="1262" Fill="lightgreen" Canvas.Left="1260" HorizontalAlignment="Center" Canvas.Top="3" VerticalAlignment="Top" />
+        <Rectangle Name ="ground" Height="32" Width="792" Fill="Black" Canvas.Top ="405" Canvas.Left="-2"/>
+        <Rectangle Name ="player" Height="91" Width="62" Fill="Brown" Canvas.Top ="159" Canvas.Left="110"/>
+        <Rectangle Name ="obstacle" Height="76" Width="76" Fill="Red" Canvas.Top ="327" Canvas.Left="785" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Name="scoreText" FontSize="32" FontWeight="Bold" Content="Score: 0" Foreground="White"/>
 
     </Canvas>
 </Window>
