@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,6 +49,15 @@ namespace TeamProject
             background.Fill = backgroundSprite;
             background2.Fill = backgroundSprite;
             StartGame();
+        }
+        public void TimerGame(int secTime)
+        {
+            int countT = 0;
+            for (int i = 0; i < secTime; i++)
+            {
+                Thread.Sleep(1000);
+                countT++;
+            }
         }
         private void GameEngine(object sender, EventArgs e)
         {
@@ -108,6 +118,8 @@ namespace TeamProject
             {
                 gameOver = true;
                 gameTimer.Stop();
+
+
             }
             if (gameOver == true)
             {
@@ -117,8 +129,10 @@ namespace TeamProject
                 player.StrokeThickness = 1;
                 playerSpeed -= counter;
                 counter = 0;
+
                 //UserForm userForm = new UserForm();
                 //userForm.ShowDialog();
+                
             }
             else
             {
