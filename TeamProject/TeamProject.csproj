@@ -129,5 +129,16 @@
   <ItemGroup>
     <Resource Include="images\background2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT.jpg" />
+    <Resource Include="images\8413c4a3d2da94c28f5380bcf336aa6d.jpg" />
+    <Resource Include="images\Free-Halloween-2D-Game-Backgrounds3-720x480.jpg" />
+    <Resource Include="images\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg" />
+    <Resource Include="images\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Voices\scary-_1_.wav" />
+    <Content Include="Voices\song.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

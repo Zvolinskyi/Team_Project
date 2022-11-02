@@ -129,10 +129,8 @@ namespace TeamProject
                 player.StrokeThickness = 1;
                 playerSpeed -= counter;
                 counter = 0;
-
                 //UserForm userForm = new UserForm();
                 //userForm.ShowDialog();
-                
             }
             else
             {
@@ -161,7 +159,6 @@ namespace TeamProject
                 jumping = true;
                 force = 15;
                 speed = -12;
-                //playerSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/background.png"));
             }
         }
         private void StartGame()
