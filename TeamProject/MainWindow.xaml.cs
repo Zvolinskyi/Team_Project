@@ -129,8 +129,8 @@ namespace TeamProject
                 player.StrokeThickness = 1;
                 playerSpeed -= counter;
                 counter = 0;
-                //UserForm userForm = new UserForm();
-                //userForm.ShowDialog();
+                UserForm userForm = new UserForm();
+                userForm.ShowDialog();
             }
             else
             {
