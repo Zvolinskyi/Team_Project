@@ -24,7 +24,6 @@ namespace TeamProject
         static public int obstacleSpeed = 2;
         static public int curentplayerSpeed = 2;
         static public int curentobstacleSpeed = 2;
-
         static int scoreToChange = 5;
         static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
