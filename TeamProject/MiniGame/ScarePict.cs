@@ -10,23 +10,27 @@ using System.Windows.Forms;
 
 namespace TeamProject
 {
-    public partial class ScaryWindow : Form
+    public partial class ScarePict : Form
     {
-        public ScaryWindow()
+        public ScarePict()
         {
             InitializeComponent();
             LoadWindow();
         }
 
-        private void CloseWindowEvent(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+       
         private void LoadWindow()
         {
             this.WindowState = FormWindowState.Normal;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Bounds = Screen.PrimaryScreen.Bounds;
         }
+
+        private void CloseWindowEvent(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        
     }
 }

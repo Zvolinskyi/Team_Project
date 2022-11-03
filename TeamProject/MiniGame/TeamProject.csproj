@@ -57,20 +57,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ScaryWindow.cs">
+    <Compile Include="ScarePict.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScaryWindow.Designer.cs">
-      <DependentUpon>ScaryWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <Compile Include="ScarePict.Designer.cs">
+      <DependentUpon>ScarePict.cs</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -80,14 +71,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="HorrorQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HorrorQuest.Designer.cs">
+      <DependentUpon>HorrorQuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -103,15 +96,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="HorrorQuest.resx">
+      <DependentUpon>HorrorQuest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScaryWindow.resx">
-      <DependentUpon>ScaryWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="ScarePict.resx">
+      <DependentUpon>ScarePict.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,45 +115,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\2.png" />
-    <Resource Include="images\3.png" />
-    <Resource Include="images\4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\menu_background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\obstacle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\background2.png" />
+    <None Include="Resources\1618462006_52-p-anime-fon-temnii-les-57.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Free-Halloween-2D-Game-Backgrounds3-720x480.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\scary-_1_.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\song.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\8413c4a3d2da94c28f5380bcf336aa6d.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-LVQ0hlgDeI.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg" />
+    <None Include="Resources\song.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scary-_1_.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8413c4a3d2da94c28f5380bcf336aa6d.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

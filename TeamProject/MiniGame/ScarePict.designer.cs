@@ -1,6 +1,6 @@
 ﻿namespace TeamProject
 {
-    partial class ScaryWindow
+    partial class ScarePict
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.CloseWindowEvent);
             // 
-            // ScaryWindow
+            // ScarePict
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,8 +50,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "ScaryWindow";
-            this.Text = "ScaryWindow";
+            this.Name = "ScarePict";
+            this.Text = "ScarePict";
+            
             this.ResumeLayout(false);
 
         }

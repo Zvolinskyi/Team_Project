@@ -60,18 +60,6 @@
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MiniGame\ScaryWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MiniGame\ScaryWindow.designer.cs">
-      <DependentUpon>ScaryWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MiniGame\UserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MiniGame\UserForm.designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,6 +78,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MiniGame\HorrorQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniGame\HorrorQuest.designer.cs">
+      <DependentUpon>HorrorQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniGame\ScarePict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniGame\ScarePict.designer.cs">
+      <DependentUpon>ScarePict.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,11 +103,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="MiniGame\ScaryWindow.resx">
-      <DependentUpon>ScaryWindow.cs</DependentUpon>
+    <EmbeddedResource Include="MiniGame\HorrorQuest.resx">
+      <DependentUpon>HorrorQuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiniGame\UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="MiniGame\ScarePict.resx">
+      <DependentUpon>ScarePict.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +151,7 @@
     <Resource Include="Resources\Free-Halloween-2D-Game-Backgrounds3-720x480.jpg" />
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg" />
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg" />
+    <None Include="Resources\imgonline-com-ua-Resize-LVQ0hlgDeI.jpg" />
     <Content Include="Resources\scary-_1_.wav" />
     <Content Include="Resources\song.wav" />
   </ItemGroup>

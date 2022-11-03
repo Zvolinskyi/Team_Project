@@ -20,8 +20,11 @@ namespace TeamProject
     public partial class MainWindow : Window
     {
         DateTime date1 = new DateTime(0, 0);
-        static int playerSpeed = 2;
-        static int obstacleSpeed = 2;
+        static public int playerSpeed = 2;
+        static public int obstacleSpeed = 2;
+        static public int curentplayerSpeed = 2;
+        static public int curentobstacleSpeed = 2;
+
         static int scoreToChange = 5;
         static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -123,14 +126,9 @@ namespace TeamProject
             }
             if (gameOver == true)
             {
-                obstacle.Stroke = Brushes.Black;
-                obstacle.StrokeThickness = 1;
-                player.Stroke = Brushes.Red;
-                player.StrokeThickness = 1;
-                playerSpeed -= counter;
-                counter = 0;
-                UserForm userForm = new UserForm();
+                HorrorQuest userForm = new HorrorQuest();
                 userForm.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -142,7 +140,7 @@ namespace TeamProject
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UserForm userForm = new UserForm();
+            HorrorQuest userForm = new HorrorQuest();
             userForm.ShowDialog();
         }
         private void KeyIsDown(object sender, KeyEventArgs e)
