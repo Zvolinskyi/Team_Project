@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="song" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\song.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_8413c4a3d2da94c28f5380bcf336aa6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8413c4a3d2da94c28f5380bcf336aa6d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scary__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scary-_1_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Free_Halloween_2D_Game_Backgrounds3_720x480" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Free-Halloween-2D-Game-Backgrounds3-720x480.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imgonline_com_ua_Resize_cNlFBz2MPT5zKWyN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="imgonline_com_ua_Resize_cNlFBz2MPT5zKWyN1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,19 +142,10 @@
   <data name="imgonline_com_ua_Resize_LVQ0hlgDeI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imgonline-com-ua-Resize-LVQ0hlgDeI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scary__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scary-_1_.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="imgonline_com_ua_Resize_cNlFBz2MPT5zKWyN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="song" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\song.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_8413c4a3d2da94c28f5380bcf336aa6d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8413c4a3d2da94c28f5380bcf336aa6d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo_5415948185844694996_y" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_5415948185844694996_y.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
