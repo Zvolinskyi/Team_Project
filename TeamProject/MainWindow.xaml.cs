@@ -14,11 +14,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Media;
 using System.Windows.Threading;
 namespace TeamProject
 {
     public partial class MainWindow : Window
     {
+        SoundPlayer Background = new SoundPlayer();
         DateTime date1 = new DateTime(0, 0);
         int playerSpeed = 2;
         int obstacleSpeed = 2;
@@ -166,6 +168,8 @@ namespace TeamProject
         }
         private void StartGame()
         {
+            Background.Stream = Properties.Resources.strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings;
+            Background.PlayLooping();
             Canvas.SetLeft(background, 0);
             Canvas.SetLeft(background2, 1262);
             Canvas.SetLeft(player, 262);

@@ -137,5 +137,14 @@ namespace TeamProject.Properties {
                 return ResourceManager.GetStream("song", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings {
+            get {
+                return ResourceManager.GetStream("strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings", resourceCulture);
+            }
+        }
     }
 }
