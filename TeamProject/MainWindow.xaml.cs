@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
@@ -15,13 +16,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.LinkLabel;
+
+
 namespace TeamProject
 {
     public partial class MainWindow : Window
     {
         DateTime date1 = new DateTime(0, 0);
-          int playerSpeed = 2;
-          int obstacleSpeed = 2;
+        string path = "score.txt";
+        Score Score = new Score();
+       
+
+
+        int playerSpeed = 2;
+        int obstacleSpeed = 2;
         static int scoreToChange = 5;
         static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -37,18 +48,15 @@ namespace TeamProject
         ImageBrush playerSprite = new ImageBrush();
         ImageBrush backgroundSprite = new ImageBrush();
         ImageBrush obstacleSprite = new ImageBrush();
+        int score;
+        
         int[] obstaclePosition = { 320, 310, 300, 305, 315 };
-        int score = 0;
-
+        
         public MainWindow()
         {
-            Score Score = new Score();
-            Score.curentPlayerSpeed = playerSpeed;
-            Score.curentObstacleSpeed = obstacleSpeed;
-            Score.curentScore = score;
-            playerSpeed = Score.curentPlayerSpeed;
-            obstacleSpeed = Score.curentObstacleSpeed;
-            score = Score.curentScore;
+          
+        
+          
             InitializeComponent();
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
@@ -57,6 +65,35 @@ namespace TeamProject
             background.Fill = backgroundSprite;
             background2.Fill = backgroundSprite;
             StartGame();
+            
+        }
+        public void Write()
+        {
+            if (File.Exists("score.txt"))
+            {
+                string content = File.ReadAllText("score.txt");
+                
+            }
+
+            string Score = score.ToString();
+
+           
+            File.WriteAllText("score.txt",Score) ;
+        }
+        public void Read()
+        {
+            //using (StreamReader sr = new StreamReader("score.txt"))
+            //{
+            //    string line;
+
+            //    while ((line = sr.ReadLine()) != null)
+            //    {
+            //        score = Convert.ToInt32(line);
+            //        //label1.Content = line;
+            //    }
+            //}
+           string str = File.ReadAllText("score.txt");
+            score = Convert.ToInt32(str);
         }
         public void TimerGame(int secTime)
         {
@@ -70,6 +107,29 @@ namespace TeamProject
         private void GameEngine(object sender, EventArgs e)
         {
             
+            Score.curentPlayerSpeed = playerSpeed;
+            Score.curentObstacleSpeed = obstacleSpeed;
+            
+            playerSpeed = Score.curentPlayerSpeed;
+            obstacleSpeed = Score.curentObstacleSpeed;
+           
+            //if (Score.death == true)
+            //{
+            //    using (StreamReader sr = new StreamReader("score.txt"))
+            //    {
+            //        string line;
+
+            //        while ((line = sr.ReadLine()) != null)
+            //        {
+            //            score = Convert.ToInt32(line);
+            //            //label1.Content = line;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    score = 0;
+            // }
             Canvas.SetLeft(background, Canvas.GetLeft(background) - playerSpeed);
             Canvas.SetLeft(background2, Canvas.GetLeft(background2) - playerSpeed);
             if (Canvas.GetLeft(background) < -1262)
@@ -131,6 +191,9 @@ namespace TeamProject
             }
             if (gameOver == true)
             {
+                Write();
+                Score.death = true;
+                
                 HorrorQuest userForm = new HorrorQuest();
                 userForm.ShowDialog();
                 this.Close();
@@ -166,6 +229,7 @@ namespace TeamProject
         }
         private void StartGame()
         {
+           
             Canvas.SetLeft(background, 0);
             Canvas.SetLeft(background2, 1262);
             Canvas.SetLeft(player, 262);
@@ -177,7 +241,18 @@ namespace TeamProject
             obstacle.Fill = obstacleSprite;
             gameOver = false;
             jumping = false;
-            score = 0;
+            if (Score.death == true)
+            {
+                Read();
+
+            }
+            else
+            {
+                score = 0;
+            }
+
+
+
             scoreText.Content = "Score: " + score;
             gameTimer.Start();
         }
