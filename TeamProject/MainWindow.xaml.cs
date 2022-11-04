@@ -20,10 +20,8 @@ namespace TeamProject
     public partial class MainWindow : Window
     {
         DateTime date1 = new DateTime(0, 0);
-        static public int playerSpeed = 2;
-        static public int obstacleSpeed = 2;
-        static public int curentplayerSpeed = 2;
-        static public int curentobstacleSpeed = 2;
+        int playerSpeed = 2;
+        int obstacleSpeed = 2;
         static int scoreToChange = 5;
         static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -41,8 +39,16 @@ namespace TeamProject
         ImageBrush obstacleSprite = new ImageBrush();
         int[] obstaclePosition = { 320, 310, 300, 305, 315 };
         int score = 0;
+
         public MainWindow()
         {
+            Score Score = new Score();
+            Score.curentPlayerSpeed = playerSpeed;
+            Score.curentObstacleSpeed = obstacleSpeed;
+            Score.curentScore = score;
+            playerSpeed = Score.curentPlayerSpeed;
+            obstacleSpeed = Score.curentObstacleSpeed;
+            score = Score.curentScore;
             InitializeComponent();
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
@@ -126,7 +132,7 @@ namespace TeamProject
             if (gameOver == true)
             {
                 HorrorQuest userForm = new HorrorQuest();
-                userForm.ShowDialog();
+                userForm.ShowDialog(); 
                 this.Close();
             }
             else
@@ -169,8 +175,8 @@ namespace TeamProject
             RunSprite(1);
             obstacleSprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/obstacle.png"));
             obstacle.Fill = obstacleSprite;
-            jumping = false;
             gameOver = false;
+            jumping = false;
             score = 0;
             scoreText.Content = "Score: " + score;
             gameTimer.Start();
