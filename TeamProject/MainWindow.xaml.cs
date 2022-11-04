@@ -103,7 +103,7 @@ namespace TeamProject
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            
+            Score Score = new Score();
             Score.curentPlayerSpeed = playerSpeed;
             Score.curentObstacleSpeed = obstacleSpeed;
             
