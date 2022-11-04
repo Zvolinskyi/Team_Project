@@ -20,8 +20,8 @@ namespace TeamProject
     public partial class MainWindow : Window
     {
         DateTime date1 = new DateTime(0, 0);
-          int playerSpeed = 2;
-          int obstacleSpeed = 2;
+        int playerSpeed = 2;
+        int obstacleSpeed = 2;
         static int scoreToChange = 5;
         static int counter = 0;
         DispatcherTimer gameTimer = new DispatcherTimer();
@@ -132,7 +132,7 @@ namespace TeamProject
             if (gameOver == true)
             {
                 HorrorQuest userForm = new HorrorQuest();
-                userForm.ShowDialog();
+                userForm.ShowDialog(); 
                 this.Close();
             }
             else
