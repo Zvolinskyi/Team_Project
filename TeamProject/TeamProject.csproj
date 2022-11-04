@@ -147,12 +147,14 @@
     <Folder Include="Voices\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strashnaja_muzika_na_hellouin_brainbug_nightmare_sinister_strings.wav" />
     <Resource Include="Resources\360_F_49588706_XY6E1GsOUagfeIm0uQtmSRJQiM7k5pXT.jpg" />
     <Resource Include="Resources\8413c4a3d2da94c28f5380bcf336aa6d.jpg" />
     <Resource Include="Resources\Free-Halloween-2D-Game-Backgrounds3-720x480.jpg" />
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg" />
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg" />
     <None Include="Resources\imgonline-com-ua-Resize-LVQ0hlgDeI.jpg" />
+    <Resource Include="1b5adfdf4f1c4d02a6a545e2dfd50a06.jpg" />
     <Content Include="Resources\scary-_1_.wav" />
     <Content Include="Resources\song.wav" />
   </ItemGroup>

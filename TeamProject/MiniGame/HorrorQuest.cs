@@ -33,8 +33,8 @@ namespace TeamProject
         }
         private void Change(object sender, EventArgs e)
         {
-            MainWindow game = new MainWindow();
-            game.ShowDialog();
+            //MainWindow game = new MainWindow();
+            //game.ShowDialog();
             this.Close();
         }
         private void FormMouseEvent(object sender, EventArgs e)
