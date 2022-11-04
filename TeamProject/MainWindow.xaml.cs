@@ -20,8 +20,6 @@ using System.Windows.Threading;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.LinkLabel;
-
-
 namespace TeamProject
 {
     public partial class MainWindow : Window
@@ -46,15 +44,10 @@ namespace TeamProject
         ImageBrush backgroundSprite = new ImageBrush();
         ImageBrush obstacleSprite = new ImageBrush();
         int score;
-        
-        
         int[] obstaclePosition = { 320, 310, 300, 305, 315 };
-        
+
         public MainWindow()
         {
-          
-        
-          
             InitializeComponent();
             MyCanvas.Focus();
             gameTimer.Tick += GameEngine;
@@ -63,35 +56,51 @@ namespace TeamProject
             background.Fill = backgroundSprite;
             background2.Fill = backgroundSprite;
             StartGame();
-            
         }
         public void Write()
         {
             if (File.Exists("score.txt"))
             {
                 string content = File.ReadAllText("score.txt");
-                
+
             }
-
             string Score = score.ToString();
-
-           
-            File.WriteAllText("score.txt",Score) ;
+            File.WriteAllText("score.txt", Score);
         }
         public void Read()
         {
-            //using (StreamReader sr = new StreamReader("score.txt"))
-            //{
-            //    string line;
-
-            //    while ((line = sr.ReadLine()) != null)
-            //    {
-            //        score = Convert.ToInt32(line);
-            //        //label1.Content = line;
-            //    }
-            //}
-           string str = File.ReadAllText("score.txt");
+            string str = File.ReadAllText("score.txt");
             score = Convert.ToInt32(str);
+        }
+        public void WritePlayerSpeed()
+        {
+            if (File.Exists("score.txt"))
+            {
+                string content = File.ReadAllText("playerspeed.txt");
+
+            }
+            string PlSpeed = playerSpeed.ToString();
+            File.WriteAllText("playerspeed.txt", PlSpeed);
+        }
+        public void ReadPlayerSpeed()
+        {
+            string str = File.ReadAllText("playerspeed.txt");
+            playerSpeed = Convert.ToInt32(str);
+        }
+        public void WriteObstacleSpeed()
+        {
+            if (File.Exists("score.txt"))
+            {
+                string content = File.ReadAllText("obstaclespeed.txt");
+
+            }
+            string ObsSpeed = playerSpeed.ToString();
+            File.WriteAllText("obstaclespeed.txt",ObsSpeed);
+        }
+        public void ReadObstacleSpeed()
+        {
+           string str = File.ReadAllText("obstaclespeed.txt");
+            obstacleSpeed = Convert.ToInt32(str);
         }
         public void TimerGame(int secTime)
         {
@@ -107,27 +116,8 @@ namespace TeamProject
             Score Score = new Score();
             Score.curentPlayerSpeed = playerSpeed;
             Score.curentObstacleSpeed = obstacleSpeed;
-            
             playerSpeed = Score.curentPlayerSpeed;
             obstacleSpeed = Score.curentObstacleSpeed;
-           
-            //if (Score.death == true)
-            //{
-            //    using (StreamReader sr = new StreamReader("score.txt"))
-            //    {
-            //        string line;
-
-            //        while ((line = sr.ReadLine()) != null)
-            //        {
-            //            score = Convert.ToInt32(line);
-            //            //label1.Content = line;
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    score = 0;
-            // }
             Canvas.SetLeft(background, Canvas.GetLeft(background) - playerSpeed);
             Canvas.SetLeft(background2, Canvas.GetLeft(background2) - playerSpeed);
             if (Canvas.GetLeft(background) < -1262)
@@ -173,7 +163,6 @@ namespace TeamProject
                 Canvas.SetTop(obstacle, obstaclePosition[rnd.Next(0, obstaclePosition.Length)]);
                 score += 1;
             }
-
             if (score==scoreToChange)
             {
                 playerSpeed += 1;
@@ -184,26 +173,34 @@ namespace TeamProject
             {
                 gameOver = true;
                 gameTimer.Stop();
-
-
             }
             if (gameOver == true)
             {
                 Write();
+                WriteObstacleSpeed();
+                WritePlayerSpeed();
                 Score.death = true;
-
                 HorrorQuest userForm = new HorrorQuest();
-                userForm.ShowDialog(); 
-                this.Close();
+                Menu menu = new Menu();
+                if (Score.EndGame_ == false)
+                {
+                    
+                    userForm.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    Background.Stop();
+                    menu.ShowDialog();
+                    this.Close();
+                }
             }
             else
             {
                 player.StrokeThickness = 0;
                 obstacle.StrokeThickness = 0;
             }
-
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             HorrorQuest userForm = new HorrorQuest();
@@ -243,15 +240,13 @@ namespace TeamProject
             if (Score.death == true)
             {
                 Read();
-
+                ReadObstacleSpeed();
+                ReadPlayerSpeed();
             }
             else
             {
                 score = 0;
             }
-
-
-
             scoreText.Content = "Score: " + score;
             gameTimer.Start();
         }

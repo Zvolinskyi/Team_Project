@@ -33,29 +33,9 @@ namespace TeamProject
         }
         private void Change(object sender, EventArgs e)
         {
-            if (Score.EndGame_ == false)
-            {
-
+                Score.EndGame_ = true;
                 MainWindow game = new MainWindow();
                 game.ShowDialog();
-                this.Close();
-            }
-            else if(Score.EndGame_ == true)
-            {
-                Menu menu = new Menu();
-                menu.ShowDialog();
-                this.Close();
-            }
-          if(Score.death == true)
-            {
-                Score.EndGame_ = true;
-            }
-          
-            
-           
-                
-            
-            
         }
         private void FormMouseEvent(object sender, EventArgs e)
         { 
@@ -139,6 +119,11 @@ namespace TeamProject
         }
 
         private void HorrorQuest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
         {
 
         }
