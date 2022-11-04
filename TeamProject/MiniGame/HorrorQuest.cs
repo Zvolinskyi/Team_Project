@@ -33,9 +33,29 @@ namespace TeamProject
         }
         private void Change(object sender, EventArgs e)
         {
-            //MainWindow game = new MainWindow();
-            //game.ShowDialog();
-            this.Close();
+            if (Score.EndGame_ == false)
+            {
+
+                MainWindow game = new MainWindow();
+                game.ShowDialog();
+                this.Close();
+            }
+            else if(Score.EndGame_ == true)
+            {
+                Menu menu = new Menu();
+                menu.ShowDialog();
+                this.Close();
+            }
+          if(Score.death == true)
+            {
+                Score.EndGame_ = true;
+            }
+          
+            
+           
+                
+            
+            
         }
         private void FormMouseEvent(object sender, EventArgs e)
         { 
@@ -52,6 +72,7 @@ namespace TeamProject
         }
         private void StartGame()
         {
+            Score.death = true;
             StartButton.Enabled = false;
             player.Stream = Properties.Resources.song;
             scare.Stream = Properties.Resources.scary__1_;

@@ -12,6 +12,7 @@ namespace TeamProject
         public int curentObstacleSpeed { get; set; }
         public int curentScore { get; set; }
         public static bool death = false; 
+        public static bool EndGame_ = false; 
 
     }
 }

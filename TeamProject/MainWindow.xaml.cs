@@ -47,6 +47,7 @@ namespace TeamProject
         ImageBrush obstacleSprite = new ImageBrush();
         int score;
         
+        
         int[] obstaclePosition = { 320, 310, 300, 305, 315 };
         
         public MainWindow()
@@ -103,7 +104,7 @@ namespace TeamProject
         }
         private void GameEngine(object sender, EventArgs e)
         {
-            
+            Score Score = new Score();
             Score.curentPlayerSpeed = playerSpeed;
             Score.curentObstacleSpeed = obstacleSpeed;
             
@@ -190,7 +191,7 @@ namespace TeamProject
             {
                 Write();
                 Score.death = true;
-                
+
                 HorrorQuest userForm = new HorrorQuest();
                 userForm.ShowDialog(); 
                 this.Close();
