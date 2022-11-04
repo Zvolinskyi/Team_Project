@@ -46,13 +46,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::TeamProject.Properties.Resources._8413c4a3d2da94c28f5380bcf336aa6d;
+            this.BackgroundImage = global::TeamProject.Properties.Resources.photo_5415948185844694996_y;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Name = "ScarePict";
             this.Text = "ScarePict";
-            
             this.ResumeLayout(false);
 
         }
