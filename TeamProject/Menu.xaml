@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:TeamProject"
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="800">
-    <Grid>
-        <Button Content="Play" HorizontalAlignment="Center" Margin="0,168,0,0" VerticalAlignment="Top" Height="49" Width="180" Click="Button_Click"/>
+    <Grid RenderTransformOrigin="0.527,0.507">
+
+        <Button Content="Play            game" VerticalAlignment="Center" Height="70" Width="205" Click="Button_Click" FontFamily="Ink Free" FontSize="24" FontWeight="Bold" Margin="318,0,0,0" HorizontalAlignment="Left" BorderThickness="2,1,1,1" BorderBrush="{x:Null}" RenderTransformOrigin="0.466,0.593">
+            <Button.Background>
+                <ImageBrush ImageSource="/1b5adfdf4f1c4d02a6a545e2dfd50a06.jpg" Stretch="UniformToFill" TileMode="None"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

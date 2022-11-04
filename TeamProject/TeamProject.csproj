@@ -152,6 +152,7 @@
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN.jpg" />
     <Resource Include="Resources\imgonline-com-ua-Resize-cNlFBz2MPT5zKWyN1.jpg" />
     <None Include="Resources\imgonline-com-ua-Resize-LVQ0hlgDeI.jpg" />
+    <Resource Include="1b5adfdf4f1c4d02a6a545e2dfd50a06.jpg" />
     <Content Include="Resources\scary-_1_.wav" />
     <Content Include="Resources\song.wav" />
   </ItemGroup>
